@@ -6,6 +6,8 @@ This is the slope of the secant crossing the graph of f at the points (x0, f(x0)
 h, f(x0 + h))"""
 
 #codigo
+import numpy as np
+
 def f(x):
   y = x*np.sin(x)
   return y
@@ -20,7 +22,7 @@ Dbf(x0) = [f(x0) − f(x0 − h)]/h"""
 
 #This formula can be implemented with the following simple code
 x0 = np.pi/2
- h = 0.01
+h = 0.01
  # approximation of the derivative using 
 derivative = ( f(x0) - f(x0-h) ) / h
 print('df(x) =',derivative, 'Error =',np.abs(derivative-1.0))
@@ -38,7 +40,7 @@ f as before can be the following"""
 #Codigo
 x0 = np.pi/2
 h = 0.01
- derivative = (f(x0+h) - f(x0-h))/(2.0*h)
+derivative = (f(x0+h) - f(x0-h))/(2.0*h)
 print('df(x) =',derivative, 'Error =',np.abs(derivative-1.0))
 
 
