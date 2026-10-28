@@ -46,3 +46,27 @@ print('df(x) =',derivative, 'Error =',np.abs(derivative-1.0))
 
 #Falta Richardson
 
+#Algoritmos de Euler
+def f(t, y):
+    return y
+
+def euler(t, f, y0):
+    n = len(t)
+    y = np.zeros(n)
+    h = (t[-1] - t[0]) / (n - 1)
+    y[0] = y0
+    for i in range(n - 1):
+        y[i + 1] = y[i] + h * f(t[i], y[i])
+    return y
+
+a = 0.0; b = 2.0; N = 20
+t = np.linspace(a, b, N + 1)
+y0 = 1.0
+y = euler(t, f, y0)
+
+a = 0.0; b = 2.0; N = 20
+t = np.linspace(a, b, N + 1)
+y0 = 1.0
+y = euler(t, f, y0)
+
+
